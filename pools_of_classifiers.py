@@ -50,7 +50,7 @@ def bagging_with_perceptron(x_train, y_train, model_name):
     split_num = model_name.split('_')[4].split('.')[0]
     portion = model_name.split('\\')[1]
     model.fit(x_train, y_train)
-    pkl_filename = "ccnn/{}/split_{}/bagging_with_perceptron.pkl".format(portion, split_num)
+    pkl_filename = "models_f/{}/split_{}/bagging_with_perceptron.pkl".format(portion, split_num)
     with open(pkl_filename, 'wb') as file:
         pickle.dump(model, file)
 
