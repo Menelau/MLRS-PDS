@@ -1,6 +1,6 @@
 import deslib
 from deslib.dcs import OLA, MLA
-from deslib.des import METADES, KNORAU
+from deslib.des import METADES, KNORAU, DESMI, DESP
 from deslib.des.knora_e import KNORAE
 from deslib.static import Oracle
 from sklearn.metrics import accuracy_score
@@ -67,7 +67,9 @@ for files in glob.glob('processed_8/*'):
             # method = MLA
             # method = OLA
             # method = METADES
-            method = KNORAU
+            # method = KNORAU
+            method = DESMI
+            # method = DESP
 
             ensemble = method(pool_classifiers)
             # ensemble.fit(x_train, y_train)
