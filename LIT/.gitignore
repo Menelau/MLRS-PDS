@@ -1,0 +1,14 @@
+.ipynb_checkpoints/
+__pycache__/
+*.DS_Store
+*.pyc
+*.aux
+*.bbl
+*.blg
+*.out
+*.log
+*.bst
+datasets/icu*.npy
+results/
+writeup/
+
