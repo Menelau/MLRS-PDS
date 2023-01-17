@@ -32,14 +32,9 @@ for files in glob.glob('alll_removed/*'):
         x_dsel = input_list['FrameStack'][4]
         y_dsel = input_list['FrameStack'][5]
 
-        # # Extract general, statistical and information-theoretic measures
-        # mfe = MFE(groups=["general", "statistical", "info-theory"])
-        # mfe.fit(X, y)
-        # ft = mfe.extract()
-        # print(ft)
-
         # Extract all available measures
         mfe = MFE(groups="all")
+        # mfe = MFE(groups=['general', 'statistical', 'info-theory', 'Relative Landmarking', 'Subsampling Landmarking', 'Clustering', 'Concept', 'Itemset', 'Complexity', 'all'])
         mfe.fit(x_train, y_train)
         meta_features = mfe.extract()
         print(meta_features)
