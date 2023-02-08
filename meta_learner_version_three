@@ -24,7 +24,7 @@ for files in glob.glob('s2_test_processed_csv/*'):
     # Extract general, statistical and information-theoretic measures
     mfe1 = MFE(groups=['general', 'statistical', 'info-theory', 'Relative Landmarking', 'Subsampling Landmarking',
                       'Clustering', 'Concept', 'Itemset', 'Complexity', 'all'])
-    mfe1.fit(Xmf1, ymf1)
+    mfe1.fit(Xmf1)
     meta_features_from_file2 = mfe1.extract()
     print(meta_features_from_file2)
 
