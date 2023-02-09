@@ -91,7 +91,7 @@ def extract_meta_features(folder):
     return meta_features
 
 
-# to et and save the meta feature
+# to get and save the meta feature
 # meta_features = []
 # for file in glob.glob('testt_288_csv/*'):
 #     print(file)
