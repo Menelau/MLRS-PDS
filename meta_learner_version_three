@@ -168,4 +168,17 @@ predictions = knn.predict(test_meta)
 # Print the predicted y label
 print("Predicted y label: ", predictions)
 
+# Use the classifier to predict the probabilities of each class label for the test data
+probabilities = model.predict_proba(test_meta)
+# Get the indices of the top 3 predictions
+top_pred_indices = np.argsort(probabilities, axis=-1)[:, -3:]
+# Get the class labels for the top 3 predictions
+top_pred_labels = model.classes_[top_pred_indices]
+# Create a dataframe with the top 3 predictions
+df5 = pd.DataFrame(top_pred_labels, columns=['First Prediction', 'Second Prediction', 'Third Prediction'])
 
+# Print the dataframe
+print(df5)
+
+# Save the dataframe to an Excel file
+df5.to_excel('top_3_predictions.xlsx', index=False)
