@@ -29,14 +29,13 @@ for files in glob.glob('s2_test_processed_csv/*'):
     print(meta_features_from_file2)
 
     print(meta_features_from_file2)
-    print(len(meta_features_from_file2))
-    print("-----------------test------------------")
-    print(meta_features_from_file2[1])
+    #print(len(meta_features_from_file2))
+    #print(meta_features_from_file2[1])
     meta_features2.append(meta_features_from_file2[1])
     f_meta_features2 = [np.nan_to_num(i) for i in meta_features2]  # I replaced nan with 0 specially for knn
-    print(f_meta_features2)
+    #print(f_meta_features2)
     name = files.split(".")[0].split("\\")[1]
-    print(name)
+    #print(name)
     #et the number in the name of the dataset
     string = name
     number = ''.join(filter(str.isdigit, string))
