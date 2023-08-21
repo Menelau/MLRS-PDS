@@ -13,8 +13,8 @@ from generalized_bootstrap import GeneralizedBootstrap
 
 
 def main():
-    n_folds = 2   #5
-    repetitions = 2    #20
+    n_folds = 2   #5    #10
+    repetitions = 10
     n_groups = 1
     group = 0
     ensembles = [
