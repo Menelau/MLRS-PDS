@@ -19,7 +19,7 @@ for file in glob.glob("datasets/*.*"):
     kf = KFold(n_splits=10)
 
     # add cross validation for 10 fold
-    kf.sss = StratifiedShuffleSplit(n_splits=10, test_size=0.25, random_state=1000)
+    kf.sss = StratifiedShuffleSplit(n_splits=10, test_size=0.25, random_state=42)
     kf.sss.get_n_splits(X, y)
     split_part=0
     name = file.split(".")[0].split("\\")[1]
